@@ -1,0 +1,111 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "title": "Instrucciones",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Corresponde al texto de instrucciones."
+    },
+    "_source": {
+      "type": "string",
+      "required": true,
+      "title": "Enlace",
+      "default": "",
+      "inputType": "Text",
+      "validators": ["required"],
+      "help": "Corresponde al enlace que se presenta dentro del IFRAME"
+    },
+    "_scrolling": {
+      "type": "string",
+      "required": true,
+      "title": "Desplazamiento",
+      "default": "auto",
+      "enum": ["auto", "yes", "no"],
+      "inputType": {"type": "Select", "options": [{"val": "auto", "label":"Automático"}, {"val":"yes", "label": "Si"}, {"val":"no", "label":"No"}]},
+      "validators": ["required"],
+      "help": "El desplazamiento especifica si mostrar o no las barras de desplazamiento en un IFRAME"
+    },
+    "_width": {
+      "type": "object",
+      "required": true,
+      "title": "Ancho del IFRAME en puntos de interrupción especificados",
+      "properties": {
+        "_small": {
+          "type": "number",
+          "required": true,
+          "title": "Ancho pequeño",
+          "default": "500",
+          "inputType": "Number",
+          "validators": ["number", "required"],
+          "help": "Ancho con una ventana pequeña"
+        },
+        "_medium": {
+          "type": "number",
+          "required": true,
+          "default": "800",
+          "title": "Ancho mediano",
+          "inputType": "Number",
+          "validators": ["number", "required"],
+          "help": "Ancho con una ventana mediana"
+        },
+        "_large": {
+          "type": "number",
+          "required": true,
+          "default": "1000",
+          "title": "Ancho grande",
+          "inputType": "Number",
+          "validators": ["number", "required"],
+          "help": "Ancho con una ventana grande"
+        }
+      }
+    },
+    "_height": {
+      "type": "object",
+      "required": true,
+      "title": "Altura del IFRAME en puntos de interrupción especificados",
+      "properties": {
+        "_small": {
+          "type": "number",
+          "required": true,
+          "default": "200",
+          "title": "Alto pequeño",
+          "inputType": "Number",
+          "validators": ["number", "required"],
+          "help": "Alto con una ventana pequeña"
+        },
+        "_medium": {
+          "type": "number",
+          "required": true,
+          "default": "400",
+          "title": "Alto mediano",
+          "inputType": "Number",
+          "validators": ["number", "required"],
+          "help": "Alto con una ventana mediana"
+        },
+        "_large": {
+          "type": "number",
+          "required": true,
+          "default": "600",
+          "title": "Alto grande",
+          "inputType": "Number",
+          "validators": ["number", "required"],
+          "help": "Alto con una ventana grande"
+        }
+      }
+    }
+  }
+}

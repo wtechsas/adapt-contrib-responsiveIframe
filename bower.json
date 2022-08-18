@@ -1,0 +1,14 @@
+{
+  "name": "adapt-contrib-responsiveIframe",
+  "version": "10.0.8",
+  "homepage": "https://github.com/wtechsas/adapt-contrib-responsiveIframe",
+  "description": "Permite incrustar contenido de otras páginas dentro del recurso, que se adaptará a los puntos de interrupción configurados.",
+  "main": "/js/adapt-contrib-responsiveIframe.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "displayName": "IFrame",
+  "component": "responsiveIframe",
+  "license": "GPLv3"
+}
