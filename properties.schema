@@ -27,7 +27,7 @@
       "default": "",
       "inputType": "Text",
       "validators": ["required"],
-      "help": "Corresponde al enlace que se presenta dentro del IFRAME"
+      "help": "Permite enriquecer el contenido del recurso, ampliando su contenido con enlaces a recursos web externos al laboratorio. (links a PDF, eje. https:dominio/recurso.pdf) Nota: no soporta la carga de recursos desde Google Drive"
     },
     "_scrolling": {
       "type": "string",
